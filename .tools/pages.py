@@ -6,12 +6,14 @@ page("index.html", "BoosterBench",
     <div class="hero-copy">
       <p class="eyebrow">For schools, booster clubs, teams and youth programs</p>
       <h1>Boost your <span class="gold">bench.</span></h1>
-      <p class="lede">One app for your whole athletic program. Game and practice schedules, secure team chat, volunteer sign-ups and hours, events, tickets, the snack bar and fundraising, all in one place your school or club controls.</p>
+      <p class="lede">Swap six apps for one. Schedules, secure team chat, volunteer shifts and hours, events and fundraising, all in an app with your school's name on it.</p>
+      <div class="replaces" aria-label="What BoosterBench replaces">
+        <span class="chip">Facebook group</span><span class="chip">SignUpGenius</span><span class="chip">Venmo</span><span class="chip">Google Forms</span><span class="chip">Group texts</span><span class="chip">Paper hour logs</span>
+      </div>
       <div class="btn-row">
         <a class="btn btn-gold" href="contact.html">Book a walkthrough</a>
-        <a class="btn btn-line" href="features.html">See how it works</a>
+        <a class="btn btn-line" href="features.html">See every feature</a>
       </div>
-      <p class="hero-note">Free for families. Works on iPhone and Android. Your name on the app: <b>Lakeview powered by BoosterBench</b>.</p>
     </div>
     <div class="hero-phones" aria-hidden="true">
       <div class="phone"><img src="assets/img/volunteer.webp" alt="" width="390" height="560"></div>
@@ -20,76 +22,88 @@ page("index.html", "BoosterBench",
   </div>
 </section>
 
-<section class="scoreboard" aria-label="What BoosterBench replaces">
+<section class="proof" aria-label="Why programs pick BoosterBench">
   <div class="wrap">
-    <div class="board-side">
-      <span class="board-label">What families juggle today</span>
-      <div class="chips"><span class="chip">Facebook group</span><span class="chip">SignUpGenius</span><span class="chip">Venmo</span><span class="chip">Google Forms</span><span class="chip">Group texts</span><span class="chip">Paper hour logs</span></div>
-    </div>
-    <div class="board-score">6 → 1<small>APPS TO CHECK</small></div>
-    <div class="board-one">One app with <span>your school's name</span> on it</div>
+    <div class="proof-item"><b>$0</b><span>for families, always</span></div>
+    <div class="proof-item"><b>iPhone + Android</b><span>plus a desktop site for leaders</span></div>
+    <div class="proof-item"><b>Student-safe</b><span>built for FERPA, COPPA and NY Ed Law 2-d</span></div>
+    <div class="proof-item"><b>Your name on it</b><span>"Lakeview powered by BoosterBench"</span></div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Who it's for</p>
-      <h2>Whoever runs the program</h2>
-      <p class="lede">Each school, club or program gets its own private space. Parents, students, coaches and local fans join under it for free.</p>
+    <div class="section-head center">
+      <p class="eyebrow">Get your evenings back</p>
+      <h2>Less chasing, more cheering</h2>
+      <p class="lede">Started by a booster club volunteer who was tired of running game nights from five different apps.</p>
     </div>
-    <div class="who">
-      <article class="who-card">
-        <h3>Athletic directors</h3>
-        <p>Every team in one place. Approve coaches, review reported messages, send school-wide alerts and see reports.</p>
-        <a href="features.html#schools">For schools →</a>
-      </article>
-      <article class="who-card">
-        <h3>Booster clubs</h3>
-        <p>Fill snack bar shifts, track hours without paper, sell tickets and spirit wear, take donations and bring in local sponsors.</p>
-        <a href="features.html#clubs">For booster clubs →</a>
-      </article>
-      <article class="who-card">
-        <h3>Coaches and teams</h3>
-        <p>Secure team chats with no personal cell numbers, announcements, practice and game schedules, events and team fundraisers.</p>
-        <a href="features.html#coaches">For coaches →</a>
-      </article>
-      <article class="who-card">
-        <h3>Town rec and leagues</h3>
-        <p>Little League, town rec and travel teams get their own account, with youth sign-ups, forms, fees and team chats.</p>
-        <a href="features.html#programs">For programs →</a>
-      </article>
+    <div class="swap-grid">
+      <div class="swap"><p class="was">Texting parents at 10 PM to fill the snack bar</p><p class="now">Shifts fill from the app, with reminders the day before and 2 hours before</p></div>
+      <div class="swap"><p class="was">Adding up volunteer hours on paper</p><p class="now">Volunteers tap Check in and Check out, and the hours count themselves</p></div>
+      <div class="swap"><p class="was">Matching Venmo payments to names</p><p class="now">Every donation and ticket lands in your bank account with a name and a receipt</p></div>
+      <div class="swap"><p class="was">Retyping the game schedule into a group chat</p><p class="now">Games flow in from Schedule Galaxy (Aktivate), and changes alert families on their own</p></div>
     </div>
   </div>
 </section>
 
-<section class="section" style="background:var(--white)">
+<section class="section tint">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head center">
+      <p class="eyebrow">Who it's for</p>
+      <h2>Whoever runs the program</h2>
+      <p class="lede">Each school, club or program gets its own private space. Parents, students, coaches and local fans join it free.</p>
+    </div>
+    <div class="who">
+      <a class="who-card" href="features.html#schools">
+        <h3>Athletic directors</h3>
+        <p>Every team in one place. Approve coaches, see reported messages, send school-wide alerts.</p>
+        <span class="more">For schools →</span>
+      </a>
+      <a class="who-card" href="features.html#clubs">
+        <h3>Booster clubs</h3>
+        <p>Fill shifts, track hours without paper, sell tickets and spirit wear, take donations, sell sponsorships.</p>
+        <span class="more">For booster clubs →</span>
+      </a>
+      <a class="who-card" href="features.html#coaches">
+        <h3>Coaches</h3>
+        <p>Secure team chats with no personal cell numbers, announcements, practices, events and team fundraisers.</p>
+        <span class="more">For coaches →</span>
+      </a>
+      <a class="who-card" href="features.html#programs">
+        <h3>Town rec and leagues</h3>
+        <p>Little League, town rec and travel teams get their own account, with youth sign-ups, forms and fees.</p>
+        <span class="more">For programs →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head center">
       <p class="eyebrow">What's inside</p>
       <h2>Built around game day</h2>
     </div>
     <div class="feature-row">
       <div class="feature-copy">
-        <h3>Volunteers who show up, and hours that count themselves</h3>
-        <p>Post snack bar shifts for any home game in a minute. Families sign up from their phones and get a reminder the day before.</p>
+        <h3>Volunteers who show up</h3>
+        <p>Post snack bar shifts for every home game at once. Families sign up from their phones.</p>
         <ul>
-          <li>Families sign up to bring food items, not just work shifts</li>
-          <li>Volunteers check in and out at the stand, so hours are logged for you</li>
-          <li>Separate totals for community service hours</li>
-          <li>Friendly team-by-team totals that never name who didn't help</li>
+          <li>Sign up to work a shift or bring food items</li>
+          <li>Hours log themselves at check-in, with separate community service hours</li>
+          <li>Team-by-team totals that never name who didn't help</li>
         </ul>
       </div>
       <div class="feature-shot"><img src="assets/img/volunteer.webp" alt="The Volunteer tab showing 5.5 hours this school year and open snack bar shifts" width="390" height="700" loading="lazy"></div>
     </div>
     <div class="feature-row flip">
       <div class="feature-copy">
-        <h3>Coach chat with parents always included</h3>
-        <p>Every team gets a Team + Parents chat and a Parents-only chat. Coaches, players and families talk without anyone giving out a cell number.</p>
+        <h3>Team chat without cell numbers</h3>
+        <p>Every team gets a Team + Parents chat and a Parents-only chat. Coaches can also message one parent, or one player with a parent copied.</p>
         <ul>
           <li>Quiet hours from 10 PM to 5 AM for everyone</li>
           <li>No adult alone in a chat with a student, ever</li>
-          <li>Cell numbers and emails stay private unless a parent chooses to share</li>
           <li>Press and hold any message to report it</li>
         </ul>
       </div>
@@ -98,22 +112,28 @@ page("index.html", "BoosterBench",
     <div class="feature-row">
       <div class="feature-copy">
         <h3>Your schedule, not a new system</h3>
-        <p>BoosterBench reads the games you already keep in Schedule Galaxy or Aktivate, and coaches add practices. Changes alert families automatically, so nobody types a game schedule twice.</p>
+        <p>BoosterBench reads the games you already keep in Schedule Galaxy (Aktivate). Coaches add practices.</p>
         <ul>
           <li>Every child's games and practices in one list on Home</li>
           <li>"I'm going" buttons help pack the stands and plan the snack bar</li>
-          <li>Events like banquets, pasta nights and Hype Nights</li>
+          <li>Banquets, pasta nights and Hype Nights, with tickets and RSVPs</li>
         </ul>
       </div>
       <div class="feature-shot"><img src="assets/img/events.webp" alt="The Events screen listing a team pasta night, a Hype Night and a fall sports banquet" width="390" height="700" loading="lazy"></div>
     </div>
-    <p style="margin-top:24px"><a class="btn btn-line" href="features.html" style="color:var(--navy)">See every feature</a></p>
+  </div>
+</section>
+
+<section class="mini-cta">
+  <div class="wrap">
+    <p><b>Want to see it with your school's name on it?</b> We'll show you in 20 minutes.</p>
+    <a class="btn btn-gold" href="contact.html">Book a walkthrough</a>
   </div>
 </section>
 
 <section class="section band">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head center">
       <p class="eyebrow">Safe by design</p>
       <h2>Student safety comes first</h2>
       <p class="lede">These rules are built into the app. Nobody has to remember to turn them on.</p>
@@ -126,23 +146,43 @@ page("index.html", "BoosterBench",
       <li><b>Your data is yours</b><span>We never sell it, and students never see ads.</span></li>
       <li><b>Breach notice within 72 hours</b><span>Well inside New York's 7-day limit.</span></li>
     </ul>
-    <div class="badges" aria-label="Privacy laws we build to"><span>FERPA</span><span>COPPA</span><span>NY ED LAW 2-D</span><span>NDPA</span></div>
-    <p style="margin-top:28px"><a class="btn btn-line" href="safety.html">How we protect students</a></p>
+    <div class="band-foot">
+      <div class="badges" aria-label="Privacy laws we build to"><span>FERPA</span><span>COPPA</span><span>NY ED LAW 2-D</span><span>NDPA</span></div>
+      <a class="btn btn-line" href="safety.html">How we protect students</a>
+    </div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head center">
       <p class="eyebrow">Getting started</p>
       <h2>Up and running this week</h2>
     </div>
     <ol class="steps">
-      <li><b>Book a walkthrough</b><span>20 minutes on a video call. We'll show the app with a sample school.</span></li>
-      <li><b>We set up your space</b><span>Your name, colors and logo. We connect your Schedule Galaxy or Aktivate games.</span></li>
-      <li><b>Invite coaches and leaders</b><span>Your admin approves each one. Coaches get their team's join codes.</span></li>
-      <li><b>Families join from their phones</b><span>They enter a code and land on their team, ready to volunteer and chat.</span></li>
+      <li><b>Book a walkthrough</b><span>20 minutes on a video call, using a sample school.</span></li>
+      <li><b>We set up your space</b><span>Your name, colors and logo, and your Schedule Galaxy games.</span></li>
+      <li><b>Invite coaches and leaders</b><span>Your admin approves each one. Coaches get join codes.</span></li>
+      <li><b>Families join</b><span>They enter a code and land on their team, ready to go.</span></li>
     </ol>
+  </div>
+</section>
+
+<section class="section tint">
+  <div class="wrap">
+    <div class="price-teaser">
+      <div class="stack" style="gap:10px">
+        <p class="eyebrow">Pricing</p>
+        <h2>Public prices, no surprise quotes</h2>
+        <p class="lede">Free for families. Each school, club or program pays one yearly plan, plus a small fee only when money moves.</p>
+      </div>
+      <div class="teaser-nums">
+        <div><b>$0</b><span>families</span></div>
+        <div><b>$300–900</b><span>per organization, per year</span></div>
+        <div><b>2%</b><span>on donations, tickets and sales</span></div>
+      </div>
+      <a class="btn btn-line dark" href="pricing.html">See pricing and fees</a>
+    </div>
   </div>
 </section>
 ''' + CTA)
@@ -216,7 +256,7 @@ page("features.html", "BoosterBench Features",
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">For booster clubs</p>
-      <h2>Less chasing, more cheering</h2>
+      <h2>Run the club, not the paperwork</h2>
       <p class="lede">Club roles match how boards really work: a president with every power, a treasurer who sees the money (and no chats), and a volunteer coordinator for sign-ups and hours.</p>
     </div>
     <div class="grid-3">
@@ -301,7 +341,7 @@ page("features.html", "BoosterBench Features",
         </ul>
       </article>
     </div>
-    <p style="margin-top:28px"><a class="btn btn-gold" href="pricing.html">See fees and pricing</a></p>
+    <p style="margin-top:28px;text-align:center"><a class="btn btn-gold" href="pricing.html">See fees and pricing</a></p>
   </div>
 </section>
 
@@ -352,8 +392,9 @@ page("features.html", "BoosterBench Features",
     <div class="section-head">
       <p class="eyebrow">Later</p>
       <h2>On the roadmap</h2>
+      <p class="lede">These three are coming next.</p>
     </div>
-    <div class="grid-3">
+    <div class="roadmap">
       <div class="tile"><span class="tag">Later</span><h3>Snack bar and apparel inventory</h3><p>Enter what each item cost and its markup, and track sales against your stock.</p></div>
       <div class="tile"><span class="tag">Later</span><h3>Snack bar menu ordering</h3><p>Fans pick items on their phone, pay, and get an order number for the window.</p></div>
       <div class="tile"><span class="tag">Later</span><h3>Venmo and PayPal</h3><p>More ways to pay, alongside cards, Apple Pay, Google Pay and Cash App Pay.</p></div>
@@ -383,7 +424,10 @@ page("pricing.html", "BoosterBench Pricing",
         <ul>
           <li>Schedules, chat, volunteering, events and news</li>
           <li>One login across every school, club and program</li>
+          <li>Volunteer hours, service hours and points tracked for you</li>
+          <li>Pay or give only when you choose to</li>
         </ul>
+        <p class="for" style="margin-top:auto">Nothing to install for grandparents and alumni who just want to give: a web link works.</p>
       </article>
       <article class="price featured">
         <p class="eyebrow">Your organization's plan</p>
@@ -448,14 +492,14 @@ page("pricing.html", "BoosterBench Pricing",
     <div class="section-head">
       <h2>Pricing questions</h2>
     </div>
-    <div class="stack" style="gap:10px;max-width:760px">
+    <div class="stack qa-list">
       <details class="qa"><summary>Do families pay anything?</summary><div class="ans"><p>No. Parents, students, coaches and supporters join free. They only pay for things they choose to buy or give.</p></div></details>
       <details class="qa"><summary>Does our booster club need its own plan if the school has one?</summary><div class="ans"><p>Each organization buys its own plan. Talk to us about how your school and club are set up, and we'll find the simplest fit.</p></div></details>
       <details class="qa"><summary>Will families see ads?</summary><div class="ans"><p>Adults may see your local sponsors' cards on Home, the Give tab and event pages. Ads never appear in chats, and students never see any ads. Later, adults may also see a few national brand ads, and your organization can pay to turn those off.</p></div></details>
       <details class="qa"><summary>Who holds the money?</summary><div class="ans"><p>Your organization does. Payments go to your own Stripe-connected bank account. BoosterBench never stores card or bank numbers.</p></div></details>
       <details class="qa"><summary>What does the founding pilot cost?</summary><div class="ans"><p>Pilot schools, clubs and programs help shape the app this season. <a href="contact.html">Book a walkthrough</a> and we'll talk through pilot terms.</p></div></details>
     </div>
-    <p class="fine" style="color:var(--muted);margin-top:24px">Pricing is planned and may change before launch. Card fee shown is an estimate.</p>
+    <p class="fine" style="color:var(--muted);margin-top:24px;text-align:center">Pricing is planned and may change before launch. Card fee shown is an estimate.</p>
   </div>
 </section>
 ''' + CTA)
@@ -516,8 +560,8 @@ page("safety.html", "BoosterBench Safety",
         </tbody>
       </table>
     </div>
-    <p style="margin-top:28px">More questions? Read the <a href="help.html#safety">safety and privacy help</a>.</p>
-    <p class="fine" style="color:var(--muted);margin-top:8px">Privacy commitments last reviewed October 2026 and pending review by a lawyer.</p>
+    <p style="margin-top:28px;text-align:center">More questions? Read the <a href="help.html#safety">safety and privacy help</a>.</p>
+    <p class="fine" style="color:var(--muted);margin-top:8px;text-align:center">Privacy commitments last reviewed October 2026 and pending review by a lawyer.</p>
   </div>
 </section>
 ''' + CTA)
