@@ -1,5 +1,11 @@
-import os, sys
+import os, sys, hashlib
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
+
+def ver(path):
+    # Short content hash so browsers fetch the new file after every change.
+    with open(os.path.join(OUT, path), "rb") as f:
+        return hashlib.sha1(f.read()).hexdigest()[:8]
+
 
 NAV = [("index.html", "Home"), ("features.html", "Features"), ("pricing.html", "Pricing"), ("safety.html", "Safety"), ("help.html", "Help")]
 
@@ -24,7 +30,7 @@ def head(title, desc, page):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Figtree:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/site.css?v=''' + ver("assets/site.css") + '''">
 </head>
 <body>
 <a href="#main" class="hp">Skip to content</a>
@@ -64,8 +70,8 @@ FOOT = '''</main>
     </nav>
   </div>
 </footer>
-<script src="assets/help-data.js"></script>
-<script src="assets/site.js"></script>
+<script src="assets/help-data.js?v=''' + ver("assets/help-data.js") + '''"></script>
+<script src="assets/site.js?v=''' + ver("assets/site.js") + '''"></script>
 </body>
 </html>
 '''
