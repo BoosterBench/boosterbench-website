@@ -4,12 +4,14 @@ page("index.html", "BoosterBench",
 '''<section class="hero">
   <div class="wrap">
     <div class="hero-copy">
-      <p class="eyebrow">For booster clubs, athletic departments, town rec and travel teams</p>
+      <p class="eyebrow">For athletic departments, booster clubs, town rec and travel teams</p>
       <h1>Boost your <span class="gold">bench.</span></h1>
       <p class="lede">Stop juggling a dozen apps. BoosterBench runs your whole program in one place, from the AD's office to the snack bar. Volunteer shifts and hours, sign-ups and fees, secure team chat, schedules and fundraising, all with your name on it.</p>
-      <p class="replaces-label">Replaces all of this:</p>
-      <div class="replaces" aria-label="What BoosterBench replaces">
-        <span class="chip">Facebook group</span><span class="chip">SignUpGenius</span><span class="chip">Venmo</span><span class="chip">Google Forms</span><span class="chip">Group texts</span><span class="chip">Paper hour logs</span><span class="chip">Email chains</span>
+      <div class="replaces-box">
+        <p class="replaces-label">One app instead of</p>
+        <ul class="replaces">
+          <li>Facebook groups</li><li>SignUpGenius</li><li>Venmo</li><li>Google Forms</li><li>Group texts</li><li>Email chains</li><li>Paper hour logs</li><li>Flyers sent home</li>
+        </ul>
       </div>
       <div class="btn-row">
         <a class="btn btn-gold" href="contact.html">Book a walkthrough</a>
@@ -53,7 +55,7 @@ page("index.html", "BoosterBench",
     </div>
     <div class="familiar">
       <p class="eyebrow">Sound familiar?</p>
-      <p><b>This fall our family missed volleyball team pictures.</b> Another parent texted me about it and said the coach would send a flyer home. The flyer never came, so my daughter didn't know. The details went to a Facebook Messenger inbox I never check, and the coach didn't know much either.</p>
+      <blockquote class="familiar-quote"><p>"This fall, we missed my daughter's volleyball team pictures. Another parent texted me that the coach would send a flyer home. It never came, so my daughter had no idea. The follow-up details landed in a Facebook Messenger inbox I never check, and even the coach wasn't sure what was going on. One message in the right place would have fixed it."</p></blockquote>
       <p class="fix">With BoosterBench, picture day is one announcement to the whole team. Every parent and player gets the same alert, and the coach can add it as an event with a reminder. Nobody gets left out.</p>
     </div>
   </div>
@@ -185,12 +187,12 @@ page("index.html", "BoosterBench",
       <h2>Less chasing, more cheering</h2>
     </div>
     <div class="swap-grid">
-      <div class="swap"><p class="was">Checking a dozen places for schedule changes</p><p class="now">Every child's games and practices on one Home screen, with an alert when anything changes</p></div>
-      <div class="swap"><p class="was">Finagling rides for four kids</p><p class="now">Private carpools: ask for or offer seats, only with families you choose</p></div>
-      <div class="swap"><p class="was">Texting parents at 10 PM to fill the snack bar</p><p class="now">Shifts fill from the app, with reminders the day before and 2 hours before</p></div>
-      <div class="swap"><p class="was">Adding up volunteer hours on paper</p><p class="now">Volunteers tap Check in and Check out, and the hours count themselves</p></div>
-      <div class="swap"><p class="was">Matching Venmo payments to names</p><p class="now">Every donation and ticket lands in your bank account with a name and a receipt</p></div>
-      <div class="swap"><p class="was">Chasing sign-up forms and fees</p><p class="now">Parents register, sign forms and pay in one place, and you see who's missing</p></div>
+      <div class="swap"><p class="was"><span>Before</span>Checking a dozen places for schedule changes</p><p class="now"><span>Now</span>Every child's games and practices on one Home screen, with an alert when anything changes</p></div>
+      <div class="swap"><p class="was"><span>Before</span>Finagling rides for four kids</p><p class="now"><span>Now</span>Private carpools: ask for or offer seats, only with families you choose</p></div>
+      <div class="swap"><p class="was"><span>Before</span>Texting parents at 10 PM to fill the snack bar</p><p class="now"><span>Now</span>Shifts fill from the app, with reminders the day before and 2 hours before</p></div>
+      <div class="swap"><p class="was"><span>Before</span>Adding up volunteer hours on paper</p><p class="now"><span>Now</span>Volunteers tap Check in and Check out, and the hours count themselves</p></div>
+      <div class="swap"><p class="was"><span>Before</span>Matching Venmo payments to names</p><p class="now"><span>Now</span>Every donation and ticket lands in your bank account with a name and a receipt</p></div>
+      <div class="swap"><p class="was"><span>Before</span>Chasing sign-up forms and fees</p><p class="now"><span>Now</span>Parents register, sign forms and pay in one place, and you see who's missing</p></div>
     </div>
   </div>
 </section>
