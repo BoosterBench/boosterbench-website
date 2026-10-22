@@ -389,3 +389,7 @@ mark { background: var(--gold-soft); color: inherit; padding: 0 2px; border-radi
 .swap .now span { color: #b07a00; }
 .familiar-quote { margin: 0; }
 .familiar-quote p { font-size: 1.08rem; font-style: italic; color: var(--ink); }
+/* Compact "one app instead of" list: items flow in tidy rows */
+.replaces { display: flex; flex-wrap: wrap; gap: 6px; }
+.replaces li { white-space: nowrap; padding: 4px 10px 4px 24px; font-size: 0.88rem; background: rgba(255,255,255,0.08); border-radius: 999px; }
+.replaces li::before { left: 8px; top: 3px; width: auto; font-size: 1rem; }
