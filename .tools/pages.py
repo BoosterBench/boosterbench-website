@@ -39,7 +39,7 @@ page("index.html", "BoosterBench",
         <p class="eyebrow">Why we built it</p>
         <h2>Built by a sports parent who's been there</h2>
         <blockquote>
-          <p>"I've been a booster club volunteer and a PTSA member, with four kids in sports. I was managing 12 different apps, emails and social media pages just to keep up with schedules, team messages and event reminders, and to work out rides for four kids. I wanted everything in one place, so I built it."</p>
+          <p>"As a booster club volunteer, PTSA member and parent of four athletes, I was juggling 12 different apps, email threads and social media pages just to keep up. Schedules in one place, team messages in another, event reminders buried in my inbox, and a constant puzzle of who was driving which kid where. Something always slipped through the cracks. I knew there had to be a better way, so I built one, with everything in one place."</p>
           <footer>BoosterBench founder · parent volunteer</footer>
         </blockquote>
       </div>
@@ -67,31 +67,15 @@ page("index.html", "BoosterBench",
       <p class="lede">Each organization buys its own plan and gets its own private space. Pick yours to see what it looks like.</p>
     </div>
     <nav class="jump" aria-label="Pick your program">
-      <a href="#for-clubs">Booster clubs</a>
       <a href="#for-schools">Schools and athletic departments</a>
+      <a href="#for-clubs">Booster clubs</a>
       <a href="#for-rec">Town rec and leagues</a>
       <a href="#for-travel">Travel and AAU teams</a>
       <a href="#for-coaches">Coaches</a>
       <a href="#for-families">Parents and students</a>
     </nav>
 
-    <div class="feature-row" id="for-clubs">
-      <div class="feature-copy">
-        <p class="eyebrow">Booster clubs</p>
-        <h3>Fill every shift and track every dollar</h3>
-        <ul>
-          <li>Post snack bar shifts and food lists for the whole season at once</li>
-          <li>Volunteers tap Check in and Check out, so hours count themselves</li>
-          <li>Donations, event tickets, snack bar payments and a spirit wear store</li>
-          <li>Sell local sponsor cards, and your club keeps 75%</li>
-          <li>A leader dashboard with hours and money raised, ready for your board</li>
-        </ul>
-        <a class="more" href="features.html#clubs">Everything for booster clubs →</a>
-      </div>
-      <div class="feature-shot"><img src="assets/img/volunteer.webp" alt="The Volunteer tab showing 5.5 hours this school year and open snack bar shifts" width="390" height="700" loading="lazy"></div>
-    </div>
-
-    <div class="feature-row flip" id="for-schools">
+    <div class="feature-row" id="for-schools">
       <div class="feature-copy">
         <p class="eyebrow">Schools and athletic departments</p>
         <h3>Every team in one safe system</h3>
@@ -105,6 +89,22 @@ page("index.html", "BoosterBench",
         <a class="more" href="features.html#schools">Everything for schools →</a>
       </div>
       <div class="feature-shot"><img src="assets/img/admin.webp" alt="The feedback inbox, with a safety concern from a student flagged at the top" width="390" height="700" loading="lazy"></div>
+    </div>
+
+    <div class="feature-row flip" id="for-clubs">
+      <div class="feature-copy">
+        <p class="eyebrow">Booster clubs</p>
+        <h3>Fill every shift and track every dollar</h3>
+        <ul>
+          <li>Post snack bar shifts and food lists for the whole season at once</li>
+          <li>Volunteers tap Check in and Check out, so hours count themselves</li>
+          <li>Donations, event tickets, snack bar payments and a spirit wear store</li>
+          <li>Sell local sponsor cards, and your club keeps 75%</li>
+          <li>A leader dashboard with hours and money raised, ready for your board</li>
+        </ul>
+        <a class="more" href="features.html#clubs">Everything for booster clubs →</a>
+      </div>
+      <div class="feature-shot"><img src="assets/img/volunteer.webp" alt="The Volunteer tab showing 5.5 hours this school year and open snack bar shifts" width="390" height="700" loading="lazy"></div>
     </div>
 
     <div class="feature-row" id="for-rec">
@@ -252,97 +252,128 @@ page("index.html", "BoosterBench",
 ''' + CTA)
 
 # ---------- FEATURES ----------
+def shot(img, alt):
+    return f'<div class="split-shot"><div class="feature-shot"><img src="assets/img/{img}" alt="{alt}" width="390" height="700" loading="lazy"></div></div>'
+
+def tiles(items):
+    return "\n".join(f'        <div class="tile"><h3>{h}</h3><p>{p}</p></div>' for h, p in items)
+
+def split(sid, eyebrow, title, lede, items, img, alt, extra_cls=""):
+    return f'''<section class="section{extra_cls}" id="{sid}">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">{eyebrow}</p>
+      <h2>{title}</h2>
+      <p class="lede">{lede}</p>
+    </div>
+    <div class="feat-split">
+      <div class="grid-2">
+{tiles(items)}
+      </div>
+      {shot(img, alt)}
+    </div>
+  </div>
+</section>
+'''
+
+CLUBS = [
+ ("Shifts for a whole season", "Post concession shifts and food lists for every home game at once. See which shifts are still empty."),
+ ("Hours that count themselves", "Volunteers tap Check in and Check out. Leaders confirm hours with a tap. Badges at 10, 25 and 50 hours, and printable service hours records."),
+ ("Leader dashboard", "Three big numbers (volunteer hours, money raised per event, money raised overall) and a \"Needs your attention\" list. Download any report as a spreadsheet."),
+ ("Points and rewards", "Set your own rules: what earns points, what they buy (hoodies, clinics, a family requirement), and when they reset. Spirit points and a House Cup if your school wants one."),
+ ("Events and Hype Nights", "One event builder for tournaments, banquets, alumni games and Pink Out nights. \"Hype me up\" suggests themes, posters and an alert plan."),
+ ("Requests to teams", "Ask teams to send helpers (\"4 players for Trunk or Treat\"). Coaches answer in one tap, and a scoreboard shows team totals."),
+ ("Snack bar status", "Every home game shows if the snack bar is open and tonight's hot food menu."),
+ ("Surveys", "Interest checks, end-of-season surveys and quick polls, with live charts and Excel export."),
+ ("Roles that match your board", "A president with every power, a treasurer who sees the money (and no chats), and a volunteer coordinator for sign-ups and hours."),
+]
+SCHOOLS = [
+ ("You approve who's in", "Add, verify and remove coaches and club leaders. Families join only with your invite codes. Remove anyone instantly."),
+ ("Reported messages come to you", "You see every safety report. Messages can't be secretly deleted."),
+ ("Safety concerns skip the coach", "Concerns like bullying, hazing or injury come straight to you."),
+ ("School-wide and emergency alerts", "Reach every family at once, including emergency alerts during quiet hours."),
+ ("Schedules you already keep", "Games come straight from Schedule Galaxy (Aktivate). Coaches add practices."),
+ ("Your colors and logo", "Upload your mascot and pick your colors, with a full preview before you save."),
+ ("End-of-season surveys", "A reminder when it's time, and you tap Send. You choose what coaches see."),
+ ("Service hours rules", "Choose which events count for community service, and name an approver like the honor society advisor."),
+ ("Post approval switch", "Turn on approval before anything goes out school-wide."),
+ ("Privacy paperwork ready", "We sign your district's data privacy agreement and follow FERPA, COPPA and NY Ed Law 2-d. Schools can pay by purchase order."),
+]
+REC = [
+ ("Your own account", "Town rec, Little League and youth programs sign up on their own. No school needed."),
+ ("Three-step registration", "Parents pick the child, answer questions and sign forms, then pay."),
+ ("Fees made easy", "Sibling and early-bird discounts applied automatically, payment plans for fees over $25, and private fee-help requests only the director sees."),
+ ("Live totals", "Shirt counts, who signed up, and a list of who hasn't paid. Directors can mark cash payments."),
+ ("Rosters and paperwork", "Download rosters, shirt orders and emergency sheets."),
+ ("Announce teams", "Teams stay private until you tap \"Announce teams,\" then every family is told at once."),
+ ("Emergency calls, privately", "Coaches can call a player's emergency contact from the roster without seeing the number."),
+ ("Grant questions", "Optional questions for grant reports, shown to directors as totals only."),
+]
+TRAVEL = [
+ ("Private carpools", "Ask for or offer rides for any game or practice, only with carpool friends you choose. Meeting spots, never home addresses."),
+ ("Tournaments", "Run tournaments with paid or free tickets. Tickets arrive as a QR code that a volunteer scans at the door."),
+ ("Waivers", "Parents tap-sign a waiver for each player under 18, and signed copies are saved."),
+ ("Team fees and fundraisers", "Collect fees with payment plans, and run team fundraisers with a progress bar."),
+ ("Event chats", "A tournament or program can have its own chat with its organizer. It closes on its own after the event."),
+ ("Safety without an AD", "When there's no athletic director, safety reports go to your organization's owner."),
+ ("One family login", "Families use the same login for school teams and travel teams, with walls between organizations."),
+ ("Secure team chat", "Team + Parents and Parents-only chats, with no personal cell numbers."),
+]
+COACHES = [
+ ("Secure team group chats", "Chat with players and parents, plus one-on-one chats with a parent, or with a player (their parent is always copied). Nobody hands out a cell number."),
+ ("Announcements", "Post to the whole team, just parents, or just players, with an optional phone alert."),
+ ("Practice schedule", "Add practices with a weekly repeat, right next to your games. Changes alert families automatically."),
+ ("Create events", "Team dinners, senior nights and car washes, with RSVPs, help sign-ups and flyers."),
+ ("Team fundraising", "Start a fundraiser for your team, approved by your club or AD, and see the running total."),
+ ("Urgent override", "Send a cancellation or bus delay during quiet hours."),
+ ("Scores and recaps", "A score reminder after each game, and an AI recap draft you edit and approve."),
+ ("Polls and helpers", "Quick polls, plus volunteer shifts and hours for your own team."),
+]
+FAMILIES = [
+ ("Home: what's coming up", "The next three days of games and practices for all your kids in one list, marked by child, plus cards for anything waiting on you."),
+ ("Games and practices", "Any change or cancellation sends an alert, with a map link and Add to my calendar."),
+ ("Volunteer in two taps", "Claim a shift or pledge food items. Reminders the day before and two hours before."),
+ ("Hours and points", "Hours, community service hours and points add up for each parent, each child and the family."),
+ ("\"I'm going\"", "RSVP to games and events, see the crowd count grow, and invite friends on Hype Nights."),
+ ("Team photo albums", "Private albums for each team. A parent OKs any photo their child posts."),
+ ("Private carpool", "Ask or offer rides only to carpool friends you choose."),
+ ("Fan clubs", "Anyone in the school can join a team's fan club to follow its schedule, news and photos."),
+ ("News feed and alerts", "Posts from the school, club and coaches. Choose which alerts you get."),
+ ("Feedback and surveys", "Send a respectful note to a coach or the club, with your name or anonymously."),
+]
+
 page("features.html", "BoosterBench Features",
- "Everything BoosterBench does for schools, booster clubs, coaches, families and youth programs: schedules, chat, volunteers, events, tickets, snack bar, donations, apparel, sponsors and more.",
+ "Everything BoosterBench does for booster clubs, schools, town rec and travel teams, coaches and families: schedules, chat, volunteers, sign-ups, events, tickets, snack bar, donations, apparel, sponsors and more.",
 '''<section class="page-head">
   <div class="wrap">
     <p class="eyebrow">Features</p>
     <h1>Everything in one app</h1>
-    <p class="lede">Five simple tabs for everyone: Home, Teams, Chat, Volunteer and Give. What you can do depends on your role, and your organization decides who gets which powers. Organizers also get a desktop website for setup and reports.</p>
+    <p class="lede">Five simple tabs for everyone: Home, Teams, Chat, Volunteer and Give. What you can do depends on your role, and your organization decides who gets which powers. Leaders also get a desktop website for setup and reports.</p>
     <nav class="btn-row" aria-label="Jump to">
-      <a class="btn btn-line" href="#families">Families</a>
-      <a class="btn btn-line" href="#coaches">Coaches</a>
+      <a class="btn btn-line" href="#schools">Schools and athletic departments</a>
       <a class="btn btn-line" href="#clubs">Booster clubs</a>
       <a class="btn btn-line" href="#money">Fundraising and payments</a>
-      <a class="btn btn-line" href="#schools">Schools</a>
-      <a class="btn btn-line" href="#programs">Youth programs</a>
+      <a class="btn btn-line" href="#programs">Town rec and leagues</a>
+      <a class="btn btn-line" href="#travel">Travel and AAU teams</a>
+      <a class="btn btn-line" href="#coaches">Coaches</a>
+      <a class="btn btn-line" href="#families">Parents and students</a>
     </nav>
   </div>
 </section>
-
-<section class="section" id="families">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">For families</p>
-      <h2>What parents and students see</h2>
-      <p class="lede">Free for every family. One login covers every child, every team and every organization they belong to.</p>
-    </div>
-    <div class="grid-3">
-      <div class="tile"><h3>Home: what's coming up</h3><p>The next three days of games and practices for all your kids in one list, marked by child. A countdown to the next big home game, and cards for anything waiting on you.</p></div>
-      <div class="tile"><h3>Games and practices</h3><p>Games come straight from Schedule Galaxy (Aktivate). Coaches add practices. Any change or cancellation sends an alert, with a map link and Add to my calendar.</p></div>
-      <div class="tile"><h3>Secure team chat</h3><p>Team + Parents and Parents-only chats for every team. Message a coach without anyone sharing a cell number. Quiet hours 10 PM to 5 AM.</p></div>
-      <div class="tile"><h3>Volunteer in two taps</h3><p>Claim a snack bar shift or pledge food items. Reminders the day before and two hours before. Can't make it? The spot reopens for someone else.</p></div>
-      <div class="tile"><h3>Hours and points</h3><p>Check in and out with one button. Hours, community service hours and points add up for each parent, each child and the family.</p></div>
-      <div class="tile"><h3>News feed and alerts</h3><p>Posts from the school, club and coaches. Save posts, hide pinned ones, and choose which alerts you get.</p></div>
-      <div class="tile"><h3>"I'm going"</h3><p>RSVP to games and events, see the crowd count grow, and invite friends to pack the stands on Hype Nights.</p></div>
-      <div class="tile"><h3>Team photo albums</h3><p>Private albums for each team. A parent OKs any photo their child posts, and every photo gets an automatic check.</p></div>
-      <div class="tile"><h3>Private carpool</h3><p>Ask or offer rides for any game or practice, only to carpool friends you choose. Meeting spots, never home addresses.</p></div>
-      <div class="tile"><h3>Fan clubs</h3><p>Anyone in the school can join a team's fan club to follow its schedule, news and photos, without joining the team chat.</p></div>
-      <div class="tile"><h3>Feedback and surveys</h3><p>Send a respectful note to a coach or the club, with your name or anonymously. Answer surveys anonymously anytime.</p></div>
-      <div class="tile"><h3>Search</h3><p>Find any game, event, sign-up, team or message in your own chats.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" style="background:var(--white)" id="coaches">
-  <div class="wrap">
-    <div class="feature-row">
-      <div class="feature-copy">
-        <p class="eyebrow">For coaches</p>
-        <h2>Run your team from your phone</h2>
-        <ul>
-          <li><b>Secure team group chats</b> with players and parents, plus one-on-one chats with a parent, or with a player (their parent is always copied). Nobody hands out a personal cell number.</li>
-          <li><b>Announcements</b> to the whole team, just parents, or just players, with an optional phone alert</li>
-          <li><b>Practice schedule</b>: add practices with a weekly repeat, right next to your games, and changes alert families automatically</li>
-          <li><b>Create events</b> like team dinners, senior nights and car washes, with RSVPs, help sign-ups and flyers</li>
-          <li><b>Team fundraising</b>: start a fundraiser for your team, approved by your club or AD, and see who gave and the running total</li>
-          <li><b>Urgent override</b> for a cancellation or bus delay during quiet hours</li>
-          <li>Score reminder after each game, and an AI recap draft you edit and approve</li>
-          <li>Quick polls, volunteer shifts and hours for your own team</li>
-        </ul>
-      </div>
-      <div class="feature-shot"><img src="assets/img/chat.webp" alt="The Chat tab with secure team chats for players and parents" width="390" height="700" loading="lazy"></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="clubs">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">For booster clubs</p>
-      <h2>Run the club, not the paperwork</h2>
-      <p class="lede">Club roles match how boards really work: a president with every power, a treasurer who sees the money (and no chats), and a volunteer coordinator for sign-ups and hours.</p>
-    </div>
-    <div class="grid-3">
-      <div class="tile"><h3>Leader dashboard</h3><p>Three big numbers (volunteer hours, money raised per event, money raised overall) and a "Needs your attention" list. Download any report as a spreadsheet.</p></div>
-      <div class="tile"><h3>Shifts for a whole season</h3><p>Post concession shifts and food lists for every home game at once. See which shifts are still empty.</p></div>
-      <div class="tile"><h3>Confirm who helped</h3><p>After each event, confirm hours with a tap. Badges at 10, 25 and 50 hours, and printable service hours records for students.</p></div>
-      <div class="tile"><h3>Points and rewards</h3><p>Set your own rules: what earns points, what they buy (hoodies, clinics, a family requirement), and when they reset. Spirit points and a House Cup if your school wants one.</p></div>
-      <div class="tile"><h3>Events and Hype Nights</h3><p>One event builder for tournaments, banquets, alumni games and Pink Out nights. "Hype me up" suggests themes, posters and an alert plan.</p></div>
-      <div class="tile"><h3>Requests to teams</h3><p>Ask teams to send helpers ("4 players for Trunk or Treat"). Coaches answer in one tap, and a scoreboard shows team totals.</p></div>
-      <div class="tile"><h3>Snack bar status</h3><p>Every home game shows if the snack bar is open and tonight's hot food menu.</p></div>
-      <div class="tile"><h3>Local sponsor cards</h3><p>Sell sponsorships with your own levels, like Gold $500 and Silver $250. Sponsors get a simple report. Your club keeps 75%.</p></div>
-      <div class="tile"><h3>Surveys</h3><p>Interest checks, end-of-season surveys and quick polls, with live charts and Excel export.</p></div>
-    </div>
-  </div>
-</section>
-
+''' + split("schools", "For schools and athletic departments", "One safe system for every team",
+  "You stay in charge of who's in, what goes out, and every safety report.",
+  SCHOOLS, "reports.webp", "The Safety reports screen with a reported message waiting for review") + split("clubs", "For booster clubs", "Run the club, not the paperwork",
+  "Fill every shift, count every hour, and give your board the numbers it needs.",
+  CLUBS, "volunteer.webp", "The Volunteer tab showing hours this school year and open snack bar shifts", " tint") + '''
 <section class="section band" id="money">
   <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Fundraising and payments</p>
-      <h2>Every dollar, tracked</h2>
-      <p class="lede">Money goes straight to your organization's own bank account through Stripe. Families pay by card, Apple Pay, Google Pay or Cash App Pay. Cash is always welcome too.</p>
+    <div class="money-head">
+      <div class="section-head">
+        <p class="eyebrow">Fundraising and payments</p>
+        <h2>Every dollar, tracked</h2>
+        <p class="lede">Money goes straight to your organization's own bank account through Stripe. Families pay by card, Apple Pay, Google Pay or Cash App Pay. Cash is always welcome too.</p>
+      </div>
+      ''' + shot("sponsors.webp", "The Sponsors screen showing a gold sponsor card and how many people saw and tapped it") + '''
     </div>
     <div class="money-grid">
       <article class="money-item">
@@ -353,7 +384,6 @@ page("features.html", "BoosterBench Features",
           <li>Emailed receipts, marked tax-deductible when your club has IRS status</li>
           <li>"Cover the card fee" is on by default, and donors can round up for the club</li>
           <li>Donor names stay private unless the donor chooses to be thanked publicly</li>
-          <li>Coaches can start team fundraisers, approved by a club leader or AD</li>
         </ul>
       </article>
       <article class="money-item">
@@ -361,8 +391,7 @@ page("features.html", "BoosterBench Features",
         <ul>
           <li>Sell tickets for banquets, tournaments and alumni games, or give out free tickets</li>
           <li>Tickets arrive in the app as a QR code, and a volunteer scans them at the door</li>
-          <li>No signal? Download the ticket list before the event, or an Excel list of everyone who paid</li>
-          <li>Parents tap-sign tournament waivers for each player under 18</li>
+          <li>No signal? Download the ticket list before the event</li>
           <li>Sales tax on or off, with your own rate</li>
         </ul>
       </article>
@@ -370,10 +399,9 @@ page("features.html", "BoosterBench Features",
         <h3>Snack bar payments</h3>
         <ul>
           <li>The app makes a QR code for each event's stand. Print it or show it on a phone</li>
-          <li>Fans scan it, type the total the volunteer tells them, and show the green "Paid" screen</li>
+          <li>Fans scan it, type the total, and show the green "Paid" screen</li>
           <li>Works even when the stand has no internet, as long as the buyer's phone has signal</li>
           <li>Volunteers tap in cash sales so the night's totals stay right</li>
-          <li>Students can pay too</li>
         </ul>
       </article>
       <article class="money-item">
@@ -381,84 +409,53 @@ page("features.html", "BoosterBench Features",
         <ul>
           <li>One athletics store with apparel for every sport, inside the Give tab</li>
           <li>Print-on-demand, so your club never buys or stores inventory</li>
-          <li>Home shipping or school pickup, with optional order windows before playoffs</li>
-          <li>Your club sets its own profit and sees every order</li>
-          <li>Students can buy with a parent's OK</li>
+          <li>Home shipping or school pickup, with optional order windows</li>
+          <li>Your club sets its own profit. Students can buy with a parent's OK</li>
         </ul>
       </article>
       <article class="money-item">
-        <h3>Youth sign-up fees</h3>
+        <h3>Local sponsors</h3>
         <ul>
-          <li>Parents pay when they register, with sibling and early-bird discounts applied automatically</li>
-          <li>Payment plans for fees over $25</li>
-          <li>Private fee-help requests that only the director sees</li>
-          <li>Directors can mark cash payments</li>
+          <li>Sell sponsorships with your own levels, like Gold $500 and Silver $250</li>
+          <li>Sponsor cards show on Home, the Give tab and event pages, to adults only</li>
+          <li>Sponsors get a simple report of how many people saw and tapped</li>
+          <li>Your organization keeps 75%</li>
         </ul>
       </article>
       <article class="money-item">
         <h3>Easy money setup</h3>
         <ul>
           <li>One authorized person (treasurer, president or owner) fills in the tax paperwork once</li>
-          <li>Connect the bank account through Stripe. BoosterBench never sees or stores card or bank numbers</li>
+          <li>BoosterBench never sees or stores card or bank numbers</li>
           <li>The treasurer sees all money reports, and big changes need the owner's OK</li>
           <li>For school booster clubs, the AD gets a notice when money collection turns on</li>
         </ul>
       </article>
     </div>
-    <p style="margin-top:28px;text-align:center"><a class="btn btn-gold" href="pricing.html">See fees and pricing</a></p>
+    <p style="margin-top:28px"><a class="btn btn-gold" href="pricing.html">See fees and pricing</a></p>
   </div>
 </section>
-
-<section class="section" style="background:var(--white)" id="schools">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">For schools and athletic directors</p>
-      <h2>One system for every team</h2>
-    </div>
-    <div class="grid-3">
-      <div class="tile"><h3>You approve who's in</h3><p>Add, verify and remove coaches and club leaders. Families join only with your invite codes. Remove anyone instantly.</p></div>
-      <div class="tile"><h3>Reported messages come to you</h3><p>You see every safety report. Messages can't be secretly deleted.</p></div>
-      <div class="tile"><h3>School-wide and emergency alerts</h3><p>Reach every family at once, including emergency alerts during quiet hours.</p></div>
-      <div class="tile"><h3>Your colors and logo</h3><p>Upload your mascot and pick your colors, with a full preview before you save.</p></div>
-      <div class="tile"><h3>Feedback and safety concerns</h3><p>Safety concerns like bullying, hazing or injury skip the coach and come straight to you.</p></div>
-      <div class="tile"><h3>End-of-season surveys</h3><p>A reminder when it's time, and you tap Send. You choose what coaches see.</p></div>
-      <div class="tile"><h3>Service hours rules</h3><p>Choose which events count for community service, and name an approver like the honor society advisor.</p></div>
-      <div class="tile"><h3>Post approval switch</h3><p>Turn on approval before anything goes out school-wide.</p></div>
-      <div class="tile"><h3>Privacy paperwork ready</h3><p>We sign your district's data privacy agreement and follow FERPA, COPPA and NY Ed Law 2-d.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="programs">
-  <div class="wrap">
-    <div class="feature-row">
-      <div class="feature-copy">
-        <p class="eyebrow">For town rec, Little League and travel teams</p>
-        <h2>Youth sign-ups without the paperwork pile</h2>
-        <p>Independent programs get their own BoosterBench account. No school needed.</p>
-        <ul>
-          <li>Parents register each child in three steps: pick the child, answer questions and sign forms, then pay</li>
-          <li>Live totals, shirt counts, and a list of who hasn't paid</li>
-          <li>Download rosters, shirt orders and emergency sheets</li>
-          <li>Teams stay private until you tap "Announce teams," then every family is told at once</li>
-          <li>Coaches can call a player's emergency contact from the roster without seeing the number</li>
-          <li>Optional grant questions, shown to directors as totals only</li>
-          <li>One family login across school and town teams, with walls between organizations</li>
-        </ul>
-      </div>
-      <div class="feature-shot"><img src="assets/img/home.webp" alt="The Home screen with the next game, four big buttons and the news feed" width="390" height="700" loading="lazy"></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" style="background:var(--white)">
+''' + split("programs", "For town rec, Little League and youth programs", "Youth sign-ups without the paperwork pile",
+  "Independent programs get their own BoosterBench account. No school needed.",
+  REC, "signups.webp", "A program leader's sign-up list with shirt sizes and players to place on teams")
++ split("travel", "For travel and AAU teams", "Away games, sorted",
+  "Rides, tournaments, waivers and fees for teams that are always on the road.",
+  TRAVEL, "rides.webp", "The Rides screen for an away game, showing a ride in progress and open seats", " tint")
++ split("coaches", "For coaches", "Run your team from your phone",
+  "Everything a coach needs, and no personal cell number to hand out.",
+  COACHES, "chat.webp", "The Chat tab with secure team chats for players and parents")
++ split("families", "For parents and students", "Free, and everything in one place",
+  "One login covers every child, every team and every organization they belong to.",
+  FAMILIES, "home.webp", "The Home screen with the next game, four big buttons and the news feed", " tint")
++ '''
+<section class="section">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">Later</p>
       <h2>On the roadmap</h2>
       <p class="lede">These three are coming next.</p>
     </div>
-    <div class="roadmap">
+    <div class="grid-3">
       <div class="tile"><span class="tag">Later</span><h3>Snack bar and apparel inventory</h3><p>Enter what each item cost and its markup, and track sales against your stock.</p></div>
       <div class="tile"><span class="tag">Later</span><h3>Snack bar menu ordering</h3><p>Fans pick items on their phone, pay, and get an order number for the window.</p></div>
       <div class="tile"><span class="tag">Later</span><h3>Venmo and PayPal</h3><p>More ways to pay, alongside cards, Apple Pay, Google Pay and Cash App Pay.</p></div>

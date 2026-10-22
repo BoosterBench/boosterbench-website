@@ -358,3 +358,18 @@ mark { background: var(--gold-soft); color: inherit; padding: 0 2px; border-radi
 @media (max-width: 600px) { .swap-grid { grid-template-columns: 1fr; } }
 .familiar { background: var(--white); border: 1px solid var(--line); border-left: 5px solid var(--gold); border-radius: 16px; padding: 22px 26px; display: grid; gap: 10px; }
 .familiar .fix { font-weight: 600; color: var(--navy); }
+
+/* Features page: tiles beside a phone screen */
+.feat-split { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 32px; align-items: start; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.split-shot { position: sticky; top: 96px; }
+.tint .tile { background: var(--paper); }
+.money-head { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 32px; align-items: center; margin-bottom: 12px; }
+.money-head .section-head { margin-bottom: 0; }
+@media (max-width: 860px) {
+  .feat-split, .money-head { grid-template-columns: 1fr; }
+  .split-shot { position: static; order: -1; justify-self: center; width: 220px; }
+  .money-head .split-shot { order: 0; }
+}
+@media (max-width: 560px) { .grid-2 { grid-template-columns: 1fr; } }
+.jump a, .page-head nav .btn { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.85rem; }
