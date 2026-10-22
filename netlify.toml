@@ -1,0 +1,17 @@
+# Netlify settings for the public website (boosterbench.com).
+[build]
+  publish = "."
+  command = "echo 'Static site, nothing to build'"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[redirects]]
+  from = "/faq"
+  to = "/help.html"
+  status = 301
