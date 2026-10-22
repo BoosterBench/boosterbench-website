@@ -245,8 +245,8 @@ mark { background: var(--gold-soft); color: inherit; padding: 0 2px; border-radi
 @media (max-width: 760px) { .site-footer .wrap { grid-template-columns: 1fr; } }
 
 /* Help helper (floating) */
-.helper-fab { position: fixed; right: calc(20px + env(safe-area-inset-right, 0px)); bottom: calc(20px + env(safe-area-inset-bottom, 0px)); z-index: 70; background: var(--navy); color: var(--white); border: 2px solid var(--gold); border-radius: 999px; padding: 12px 20px; font: 700 1rem var(--body); cursor: pointer; box-shadow: 0 10px 30px rgba(12,27,51,0.3); }
-.helper-panel { position: fixed; right: calc(20px + env(safe-area-inset-right, 0px)); bottom: calc(84px + env(safe-area-inset-bottom, 0px)); z-index: 70; width: min(400px, calc(100vw - 40px)); max-height: min(560px, calc(100vh - 140px)); background: var(--white); border-radius: 18px; box-shadow: 0 20px 60px rgba(12,27,51,0.35); display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line); }
+.helper-fab { position: fixed; right: calc(20px + env(safe-area-inset-right, 0px)); bottom: calc(80px + env(safe-area-inset-bottom, 0px)); z-index: 70; background: var(--navy); color: var(--white); border: 2px solid var(--gold); border-radius: 999px; padding: 12px 20px; font: 700 1rem var(--body); cursor: pointer; box-shadow: 0 10px 30px rgba(12,27,51,0.3); }
+.helper-panel { position: fixed; right: calc(20px + env(safe-area-inset-right, 0px)); bottom: calc(144px + env(safe-area-inset-bottom, 0px)); z-index: 70; width: min(400px, calc(100vw - 40px)); max-height: min(560px, calc(100vh - 200px)); background: var(--white); border-radius: 18px; box-shadow: 0 20px 60px rgba(12,27,51,0.35); display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line); }
 .helper-head { background: var(--navy); color: var(--white); padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
 .helper-head b { font-family: var(--display); font-size: 1.35rem; letter-spacing: 0.02em; }
 .helper-head button { background: none; border: 0; color: var(--white); font-size: 1.5rem; cursor: pointer; line-height: 1; padding: 4px 8px; }
