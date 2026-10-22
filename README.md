@@ -18,3 +18,9 @@ Preview on your computer: `npx serve .` (or open `index.html` in a browser).
 
 Page source: the shared header, footer and page bodies live in `.tools/pages.py`. Edit there and run
 `python3 .tools/build.py` to regenerate the HTML pages (or edit the HTML directly for tiny fixes).
+
+## The app on the web (/app)
+
+`app/` is the web version of the BoosterBench app, built from the private `boosterbench-app`
+repo. Don't edit it by hand. To update it, run `npm run build:web` in `boosterbench-app`
+(it replaces this folder), then commit here. Live at https://boosterbench.com/app.
