@@ -15,3 +15,16 @@
   from = "/faq"
   to = "/help.html"
   status = 301
+
+# The web version of the app lives in /app (built from the boosterbench-app repo with
+# `npm run build:web`). Any /app address opens the app, which then shows the right screen.
+[[redirects]]
+  from = "/app/*"
+  to = "/app/index.html"
+  status = 200
+
+# Keep the app's sign-in pages out of search results.
+[[headers]]
+  for = "/app/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
