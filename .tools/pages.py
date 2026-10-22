@@ -1,12 +1,12 @@
 # ---------- HOME ----------
 page("index.html", "BoosterBench",
- "One app to run your whole athletic program: booster clubs, athletic departments, town rec and travel teams. Volunteer shifts and hours, youth sign-ups, secure team chat, schedules and fundraising.",
+ "One app for high school and youth sports: athletic departments, booster clubs, town rec and travel teams. Volunteer shifts and hours, youth sign-ups, secure team chat, schedules and fundraising.",
 '''<section class="hero">
   <div class="wrap">
     <div class="hero-copy">
-      <p class="eyebrow">For athletic departments, booster clubs, town rec and travel teams</p>
+      <p class="eyebrow">For high school and youth sports</p>
       <h1>Boost your <span class="gold">bench.</span></h1>
-      <p class="lede">Stop juggling a dozen apps. BoosterBench runs your whole program in one place, from the AD's office to the snack bar. Volunteer shifts and hours, sign-ups and fees, secure team chat, schedules and fundraising, all with your name on it.</p>
+      <p class="lede">Stop juggling a dozen apps. Athletic departments, booster clubs, town rec and travel teams run everything in one place: schedules, secure team chat, volunteer shifts and hours, sign-ups and fees, and fundraising, all with your name on it.</p>
       <div class="replaces-box">
         <p class="replaces-label">One app instead of</p>
         <ul class="replaces">
