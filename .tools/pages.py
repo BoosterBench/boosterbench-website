@@ -10,7 +10,7 @@ page("index.html", "BoosterBench",
       <div class="replaces-box">
         <p class="replaces-label">One app instead of</p>
         <ul class="replaces">
-          <li>Facebook groups</li><li>SignUpGenius</li><li>Venmo</li><li>Google Forms</li><li>Group texts</li><li>Email chains</li><li>Paper hour logs</li><li>Flyers sent home</li>
+          <li>Facebook groups</li><li>SignUpGenius</li><li>SportsEngine</li><li>Checking Schedule Galaxy</li><li>Team websites</li><li>Google Forms</li><li>Group texts</li><li>Email chains</li><li>Paper hour logs</li><li>Flyers sent home</li>
         </ul>
       </div>
       <div class="btn-row">
