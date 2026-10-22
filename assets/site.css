@@ -40,10 +40,7 @@ p { margin: 0; }
 
 .wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
 .section { padding-block: clamp(44px, 6vw, 72px); }
-.section-head { display: grid; gap: 12px; margin-bottom: 32px; max-width: 46rem; margin-inline: auto; text-align: center; justify-items: center; }
-.section-head .lede { margin-inline: auto; }
-.section-head.center { margin-inline: auto; text-align: center; justify-items: center; }
-.section-head.center .lede { margin-inline: auto; }
+.section-head { display: grid; gap: 12px; margin-bottom: 28px; max-width: 46rem; }
 .tint { background: var(--white); }
 .stack { display: grid; gap: 16px; }
 
@@ -155,7 +152,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .promise-list b { font-family: var(--display); font-size: 1.35rem; letter-spacing: 0.01em; }
 .promise-list span { color: #c9d3e3; font-size: 0.98rem; }
 @media (max-width: 760px) { .promise-list { grid-template-columns: 1fr; } }
-.badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; justify-content: center; }
+.badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
 .badges span { border: 1px solid rgba(255,184,28,0.6); color: var(--gold); border-radius: 6px; padding: 4px 10px; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.06em; }
 
 /* Steps (a real sequence) */
@@ -331,3 +328,11 @@ mark { background: var(--gold-soft); color: inherit; padding: 0 2px; border-radi
 .roadmap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 .roadmap .tile { flex: 1 1 260px; max-width: 340px; text-align: center; justify-items: center; }
 .qa-list { gap: 10px; max-width: 760px; margin-inline: auto; }
+
+/* Jump links to each audience */
+.jump { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.jump a { text-decoration: none; font-weight: 700; font-size: 0.92rem; padding: 8px 14px; border-radius: 999px; background: var(--white); border: 1px solid var(--line); color: var(--navy); }
+.jump a:hover { border-color: var(--gold); background: var(--gold-soft); }
+.feature-row { scroll-margin-top: 90px; }
+.feature-copy .more { font-weight: 700; color: var(--navy); }
+.feature-copy h3 { font-size: 1.7rem; }
