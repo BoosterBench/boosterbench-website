@@ -715,6 +715,40 @@ page("contact.html", "Book a BoosterBench Walkthrough",
 </section>
 ''')
 
+# ---------- Delete your account ----------
+page("delete-account.html", "Delete Your Account · BoosterBench",
+ "How to delete your BoosterBench account and what is removed.",
+'''<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Your account</p>
+    <h1>Delete your BoosterBench account</h1>
+    <p class="lede">You can delete your account any time. It can't be undone.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap stack" style="max-width:720px;gap:18px">
+    <h2>In the app (fastest)</h2>
+    <ol>
+      <li>Open BoosterBench and tap your picture to open <b>My profile</b>.</li>
+      <li>Scroll to the bottom and tap <b>Delete my account</b>.</li>
+      <li>Type DELETE and tap <b>Delete my account</b>. It happens right away.</li>
+    </ol>
+    <p>If you're the only president of a club that has other members, the app asks you to make another leader president first, so the club isn't left without one.</p>
+    <h2>Without the app</h2>
+    <p>Email <b>hello@boosterbench.com</b> from the email address you sign in with, with the subject "Delete my account". We delete it within 7 days and reply when it's done.</p>
+    <h2>What is deleted</h2>
+    <ul>
+      <li>Your sign-in, name and email</li>
+      <li>Your roles at every school and club</li>
+      <li>Your family list, and children's sign-up details you entered</li>
+      <li>Your volunteer sign-ups, RSVPs, carpool settings, saved posts and alerts</li>
+    </ul>
+    <h2>What stays</h2>
+    <p>Messages and posts you wrote stay for the team, shown as "Former member" instead of your name. A student's own account isn't deleted, but it is no longer linked to you. Payment receipts that the law requires a club to keep stay with the club.</p>
+  </div>
+</section>
+''')
+
 # ---------- 404 ----------
 page("404.html", "Page Not Found · BoosterBench",
  "This page doesn't exist.",
