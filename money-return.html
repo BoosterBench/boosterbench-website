@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Back to BoosterBench</title>
+<meta name="description" content="Return to the BoosterBench app.">
+<meta property="og:title" content="Back to BoosterBench">
+<meta property="og:description" content="Return to the BoosterBench app.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://boosterbench.com/money-return.html">
+<meta property="og:image" content="https://boosterbench.com/assets/app-icon.png">
+<meta name="theme-color" content="#13294B">
+<link rel="canonical" href="https://boosterbench.com/money-return.html">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Figtree:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=fc9a400f">
+</head>
+<body>
+<a href="#main" class="hp">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="BoosterBench home"><img src="assets/logo.svg" alt="" width="30" height="46"><span>Booster<b>Bench</b></span></a>
+    <button class="menu-btn" type="button" aria-controls="site-nav" aria-expanded="false">Menu</button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="safety.html">Safety</a>
+      <a href="help.html">Help</a>
+      <a class="btn btn-gold" href="contact.html">Book a walkthrough</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">BoosterBench</p>
+    <h1 id="mr-title">All set</h1>
+    <p class="lede" id="mr-text">You can go back to the BoosterBench app now.</p>
+    <div class="btn-row"><a class="btn btn-gold" href="boosterbench://">Open the BoosterBench app</a><a class="btn btn-line" href="app/">Use it on the web</a></div>
+    <p style="color:var(--muted);margin-top:16px">If the button doesn't work, close this page and open BoosterBench.</p>
+  </div>
+</section>
+<script>
+(function () {
+  var step = new URLSearchParams(location.search).get('step');
+  var t = {
+    'gift-done': ['Thank you!', 'Your gift went through. Your receipt is in the app under Give, My gifts.'],
+    'gift-cancelled': ['No gift was made', 'You can try again from the Give tab whenever you like.'],
+    'bank-done': ['Bank setup sent', 'Go back to BoosterBench and tap "I finished, check again" on the Money setup page.'],
+    'bank-again': ['Let's try that again', 'The Stripe link expired. Go back to Money setup and tap Continue on Stripe.']
+  }[step];
+  if (t) { document.getElementById('mr-title').textContent = t[0]; document.getElementById('mr-text').textContent = t[1]; }
+})();
+</script>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="stack" style="gap:10px">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" width="30" height="46"><span>Booster<b>Bench</b></span></a>
+      <p>Boost your bench. One app for schedules, team chat, volunteers, events and fundraising.</p>
+      <p class="fine">BoosterBench is in development. Features and pricing are planned and may change before launch. Privacy commitments are pending review by a lawyer.</p>
+    </div>
+    <nav aria-label="Footer">
+      <span class="foot-title">Product</span>
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="safety.html">Safety and privacy</a>
+      <a href="help.html">Help and FAQ</a>
+      <a href="delete-account.html">Delete your account</a>
+    </nav>
+    <nav aria-label="Contact">
+      <span class="foot-title">Talk to us</span>
+      <a href="contact.html">Book a walkthrough</a>
+      <span>hello@boosterbench.com</span>
+      <span class="fine">© 2026 BoosterBench</span>
+    </nav>
+  </div>
+</footer>
+<script src="assets/help-data.js?v=fed3fa1e"></script>
+<script src="assets/site.js?v=a4fb6751"></script>
+</body>
+</html>

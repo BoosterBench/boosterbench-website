@@ -749,6 +749,32 @@ page("delete-account.html", "Delete Your Account · BoosterBench",
 </section>
 ''')
 
+# ---------- Back from Stripe ----------
+page("money-return.html", "Back to BoosterBench",
+ "Return to the BoosterBench app.",
+'''<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">BoosterBench</p>
+    <h1 id="mr-title">All set</h1>
+    <p class="lede" id="mr-text">You can go back to the BoosterBench app now.</p>
+    <div class="btn-row"><a class="btn btn-gold" href="boosterbench://">Open the BoosterBench app</a><a class="btn btn-line" href="app/">Use it on the web</a></div>
+    <p style="color:var(--muted);margin-top:16px">If the button doesn't work, close this page and open BoosterBench.</p>
+  </div>
+</section>
+<script>
+(function () {
+  var step = new URLSearchParams(location.search).get('step');
+  var t = {
+    'gift-done': ['Thank you!', 'Your gift went through. Your receipt is in the app under Give, My gifts.'],
+    'gift-cancelled': ['No gift was made', 'You can try again from the Give tab whenever you like.'],
+    'bank-done': ['Bank setup sent', 'Go back to BoosterBench and tap "I finished, check again" on the Money setup page.'],
+    'bank-again': ['Let\'s try that again', 'The Stripe link expired. Go back to Money setup and tap Continue on Stripe.']
+  }[step];
+  if (t) { document.getElementById('mr-title').textContent = t[0]; document.getElementById('mr-text').textContent = t[1]; }
+})();
+</script>
+''')
+
 # ---------- 404 ----------
 page("404.html", "Page Not Found · BoosterBench",
  "This page doesn't exist.",
