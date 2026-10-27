@@ -768,7 +768,7 @@ page("money-return.html", "Back to BoosterBench",
     'gift-done': ['Thank you!', 'Your gift went through. Your receipt is in the app under Give, My gifts.'],
     'gift-cancelled': ['No gift was made', 'You can try again from the Give tab whenever you like.'],
     'bank-done': ['Bank setup sent', 'Go back to BoosterBench and tap "I finished, check again" on the Money setup page.'],
-    'bank-again': ['Let\'s try that again', 'The Stripe link expired. Go back to Money setup and tap Continue on Stripe.']
+    'bank-again': ['Try that again', 'The Stripe link expired. Go back to Money setup and tap Continue on Stripe.']
   }[step];
   if (t) { document.getElementById('mr-title').textContent = t[0]; document.getElementById('mr-text').textContent = t[1]; }
 })();
